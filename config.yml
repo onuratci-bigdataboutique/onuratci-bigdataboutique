@@ -1,0 +1,20 @@
+pulseToken: 6c1d467f-dc7f-4b13-ad10-0b879c20555b
+
+prometheus:
+  enabled: false
+  port: 9090
+
+clusters:
+    - type: kafka  #use kafka for kafka versions 0.9 and up, for 0.8 and earlier version : kafka08x
+      bootstrap.servers: PLAINTEXT://localhost:9092
+      #request.timeout.ms: 50000
+      ssl: false
+      jmx.port: 9100
+      #keystore.file: bar
+      #truststore.file: foo
+    - type: elasticsearch
+      hosts: http://localhost:9200
+#    properties:
+#      ssl.enabled: true
+#      ssl.certificate_authorities: "ca.crt" // comma separated list
+#      ssl.verification_mode: "none"
